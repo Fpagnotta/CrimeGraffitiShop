@@ -1,17 +1,32 @@
-import CartWidget from "./CartWidget"
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import CartWidget from './CartWidget';
 
-const NavBar = () => {
-
-    return(
-        <nav>
-            <a href="">INICIO</a>
-            <a href="">AEROSOLES</a>
-            <a href="">MARKERS</a>
-            <a href="">LO MAS VENDIDO</a>
-            <a href="">OFERTAS</a>
-            <CartWidget/> 
-        </nav>
-    )
+function NavBar() {
+  return (
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="#home">CR GRAFF SHOP</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">INICIO</Nav.Link>
+            <Nav.Link href="#link">OFERTAS!</Nav.Link>
+            <NavDropdown title="PRODUCTOS" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">AEROSOLES</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                MARKERS
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">CAPS</NavDropdown.Item>
+              </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+        <CartWidget/>
+      </Container>
+    </Navbar>
+  );
 }
 
-export default NavBar
+export default NavBar;

@@ -1,8 +1,15 @@
-const CartWidget = () =>
- {
-    return(
-        <span>🛒</span>
-    )
+import { FiShoppingCart } from "react-icons/fi";
 
- }
- export default CartWidget
+
+
+ function CartWidget () {
+    return(
+
+        <div>
+            <FiShoppingCart size={30}/>
+        </div>
+    );
+
+}
+
+export default CartWidget
