@@ -1,18 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 *{
   margin:0;
   padding:0 ;
   box-sizing: border-box;
+  
 }
 
+
+
 h1{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Staatliches", Courier, monospace;
   text-align: center
 }
 
 nav{
-  background-color: black;
-  font-family: 'Courier New', Courier, monospace;
-  padding: 10px 40px;
+  
+  font-family: "Staatliches", Courier, monospace;
+  padding: 100px 40px;
   position: fixed;
   top: 0;
   width: 100%;

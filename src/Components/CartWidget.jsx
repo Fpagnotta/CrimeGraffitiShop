@@ -6,7 +6,7 @@ import { FiShoppingCart } from "react-icons/fi";
     return(
 
         <div>
-            <FiShoppingCart size={30}/>
+            <FiShoppingCart size={30} color="white"/>
         </div>
     );
 

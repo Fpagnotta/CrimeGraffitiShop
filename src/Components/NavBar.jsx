@@ -6,7 +6,7 @@ import CartWidget from './CartWidget';
 
 function NavBar() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar bg="dark" variant="dark"  expand="lg" >
       <Container>
         <Navbar.Brand href="#home">CR GRAFF SHOP</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
