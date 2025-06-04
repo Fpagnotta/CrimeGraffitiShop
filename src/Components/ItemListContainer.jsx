@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { getProducts } from "../mock/AsyncMock"
+import ItemList from "./ItemList"
 
 const ItemListContainer = (props) => {
     const [data,setData] = useState ([])
@@ -13,6 +14,7 @@ const ItemListContainer = (props) => {
     return(
     <div>
         <h1>{props.inicio}</h1>
+        <ItemList data ={data}/>
     </div>
     )
 }

@@ -8,7 +8,7 @@ const Products = [
         category:"AEROSOLES",
         stock:200,
         tipo:"Brillante/Mate",
-        img:"../loop400.jpg"
+        img:"/loop400.JPG"
     },
     {
         id :"a02",
@@ -18,7 +18,7 @@ const Products = [
         category:"AEROSOLES",
         stock:500,
         tipo:"Brillante",
-        img:"../kwtpremium.jpg"
+        img:"/kwtpremium.JPG"
     },
     {
         id :"a03",
@@ -28,7 +28,7 @@ const Products = [
         category:"AEROSOLES",
         stock:150,
         tipo:"Brillante",
-        img:"../mtn400.jpg"
+        img:"/mtn400.JPG"
     },
     {
         id :"m01",
@@ -38,7 +38,7 @@ const Products = [
         category:"MARKERS",
         stock:50,
         tipo:"Punta solida",
-        img:"../loopmarker.jpg"
+        img:"/loopmarker.JPG"
     },
     {
         id :"m02",
@@ -48,7 +48,7 @@ const Products = [
         category:"MARKERS",
         stock:50,
         tipo:"Mop",
-        img:"../poscamopr.jpg"
+        img:"/poscamopr.JPG"
     },
     {
         id :"m03",
@@ -58,7 +58,7 @@ const Products = [
         category:"MARKERS",
         stock:50,
         tipo:"Punta solida",
-        img:"../unipaintmarker.jpg"
+        img:"/unipaintmarker.JPG"
     },
     {
         id :"c01",
@@ -68,7 +68,7 @@ const Products = [
         category:"CAPS",
         stock:1000,
         tipo:"Fino",
-        img:"../skynnybannana.jpg"
+        img:"/skynnybannana.JPG"
     },
     {
         id :"c02",
@@ -78,7 +78,7 @@ const Products = [
         category:"CAPS",
         stock:1000,
         tipo:"Ancho",
-        img:"../fat.jpg"
+        img:"/fat.JPG"
     },
     {
         id :"c03",
@@ -88,13 +88,13 @@ const Products = [
         category:"CAPS",
         stock:1000,
         tipo:"Medio Fino",
-        img:"../legocap.jpg"
+        img:"/legocap.JPG"
     },
 ]
 
 let Falla = false
 export const getProducts = () => {
-    return new Promise ((reject,resolve)=>{
+    return new Promise ((resolve,reject)=>{
     setTimeout(()=>{
         if(Falla){
             reject("Lo siento, hay un error en el sistema, no pude cargar los datos")
