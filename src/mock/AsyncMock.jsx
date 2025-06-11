@@ -102,7 +102,21 @@ export const getProducts = () => {
         else{
             resolve(Products)
         }
-    },5000)
+    },1000)
 })}
+
+
+export const getOneProduct = (itemId) => {
+  return new Promise((resolve, reject) => {
+    const productoEncontrado = Products.find((p) => p.itemId === itemId);
+    setTimeout(() => {
+      if (productoEncontrado) {
+        resolve(productoEncontrado);
+      } else {
+        reject("Producto no encontrado");
+      }
+    }, 500);
+  });
+};
 
 
