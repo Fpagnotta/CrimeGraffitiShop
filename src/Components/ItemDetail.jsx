@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount';
+import { CartContext } from '../Context/cartContext';
+
 
 const ItemDetail = ({detalle}) => {
 
+  const { addItem } = useContext(CartContext);
+
   const onAdd = (cantidad)=>{
+    addItem(detalle, cantidad);
     alert(`Sumaste ${cantidad} de Productos`)
   }
 
@@ -19,7 +24,7 @@ const ItemDetail = ({detalle}) => {
         <Card.Text>{detalle.description}</Card.Text>
         <Card.Text>Precio: ${detalle.price}</Card.Text>
         <ItemCount stock={detalle.stock} onAdd={onAdd}/>
-        {/* Podés agregar más detalles acá si querés */}
+        
       </Card.Body>
     </Card>
     </div>
@@ -27,3 +32,7 @@ const ItemDetail = ({detalle}) => {
 }
 
 export default ItemDetail
+
+
+
+

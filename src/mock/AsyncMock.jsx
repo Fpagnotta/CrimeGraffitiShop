@@ -108,7 +108,7 @@ export const getProducts = () => {
 
 export const getOneProduct = (itemId) => {
   return new Promise((resolve, reject) => {
-    const productoEncontrado = Products.find((p) => p.itemId === itemId);
+    const productoEncontrado = Products.find((p) => p.id === itemId); // <--- ¡ARREGLADO!
     setTimeout(() => {
       if (productoEncontrado) {
         resolve(productoEncontrado);

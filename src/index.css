@@ -13,6 +13,12 @@ h1{
   text-align: center
 }
 
+h2{
+  font-family: "Staatliches", Courier, monospace;
+  text-align: center;
+  size: 20px;
+}
+
 nav{
   
   font-family: "Staatliches", Courier, monospace;
@@ -36,6 +42,8 @@ nav{
   object-position: center;
   border-bottom: 1px solid #ddd;
 }
+
+
 
 
 
