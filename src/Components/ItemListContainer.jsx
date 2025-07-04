@@ -2,22 +2,48 @@ import { useEffect, useState } from "react";
 import { getProducts } from "../mock/AsyncMock";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
+import { database } from "../../service/firebase";
 
 const ItemListContainer = (props) => {
     const [data, setData] = useState([]);
     const { categoriaId } = useParams();
 
-    useEffect(() => {
-        getProducts()
-        .then((respuesta) => {
-            if (categoriaId) {
-                setData(respuesta.filter(prod => prod.category.toLowerCase() === categoriaId.toLowerCase()));
-            } else {
-                setData(respuesta);
+//PRODUCTOS FIREBASE : 
+
+
+useEffect (()=>{
+    const productosFirebase = collection (database,"ProductosGraffiti")
+    getDocs (productosFirebase)
+    .then((res)=>{
+        const lista = res.docs.map((doc)=>{
+            return {
+                id:doc.id,
+                ...doc.data()
             }
         })
-        .catch((error) => console.log(error));
-    }, [categoriaId]);
+        setData(lista)
+    })
+    .catch((error)=>console.log(error))
+},[])
+
+
+
+
+
+
+    // PRODUCTOS USANDO MOCK : 
+  //  useEffect(() => {
+    //      getProducts()
+     //     .then((respuesta) => {
+       //       if (categoriaId) {
+         //         setData(respuesta.filter(prod => prod.category.toLowerCase() === categoriaId.toLowerCase()));
+        //      } else {
+          //        setData(respuesta);
+           //   }
+         // })
+        //  .catch((error) => console.log(error));
+     // }, [categoriaId]);
 
     return (
         <div>
