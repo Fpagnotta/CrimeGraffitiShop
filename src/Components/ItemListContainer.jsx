@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getProducts } from "../mock/AsyncMock";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { database } from "../../service/firebase";
 
 const ItemListContainer = (props) => {
@@ -13,7 +13,10 @@ const ItemListContainer = (props) => {
 
 
 useEffect (()=>{
-    const productosFirebase = collection (database,"ProductosGraffiti")
+    const productosFirebase = categoriaId
+    ?query(collection (database,"ProductosGraffiti"),where("category","==",categoriaId))
+    :
+    collection (database,"ProductosGraffiti")
     getDocs (productosFirebase)
     .then((res)=>{
         const lista = res.docs.map((doc)=>{
@@ -25,7 +28,7 @@ useEffect (()=>{
         setData(lista)
     })
     .catch((error)=>console.log(error))
-},[])
+},[categoriaId])
 
 
 
