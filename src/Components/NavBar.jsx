@@ -16,11 +16,11 @@ function NavBar() {
             <Nav.Link as={NavLink} to='/' >INICIO</Nav.Link>
             <Nav.Link as={NavLink} to='/ofertas'>OFERTAS!</Nav.Link>
             <NavDropdown title="PRODUCTOS" id="basic-nav-dropdown">
-              <NavDropdown.Item as={NavLink} to='/categoria/aerosoles'>AEROSOLES</NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to='/categoria/markers'>
+              <NavDropdown.Item as={NavLink} to='/categoria/AEROSOLES'>AEROSOLES</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/categoria/MARKERS'>
                 MARKERS
               </NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to='/categoria/caps'>CAPS</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='/categoria/CAPS'>CAPS</NavDropdown.Item>
               </NavDropdown>
           </Nav>
         </Navbar.Collapse>

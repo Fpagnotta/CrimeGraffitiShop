@@ -5,7 +5,7 @@ import { TbHexagonNumber0Filled } from "react-icons/tb";
 
 
 const CardWidgetIcon = () => {
-    const {cantidadEnCarro} = useContext (cartContext)
+    const {cantidadEnCarro} = useContext (CartContext)
 
 return(
     <div>
@@ -14,3 +14,5 @@ return(
     </div>
 )
 }
+
+export default CardWidgetIcon

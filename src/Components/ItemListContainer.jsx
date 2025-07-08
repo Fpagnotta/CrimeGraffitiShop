@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { getProducts } from "../mock/AsyncMock";
+import { getProducts,Products } from "../mock/AsyncMock";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { database } from "../../service/firebase";
 
 const ItemListContainer = (props) => {
@@ -32,9 +32,6 @@ useEffect (()=>{
 
 
 
-
-
-
     // PRODUCTOS USANDO MOCK : 
   //  useEffect(() => {
     //      getProducts()
@@ -49,9 +46,12 @@ useEffect (()=>{
      // }, [categoriaId]);
 
     return (
+        
+        
         <div>
             <h1>{categoriaId ? categoriaId.toUpperCase() : props.inicio}</h1>
             <ItemList data={data} />
+            
         </div>
     );
 };

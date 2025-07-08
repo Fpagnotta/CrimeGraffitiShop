@@ -1,17 +1,8 @@
 
-const Products = [
+export  const Products = [
+
     {
-        id :"a01",
-        name:"LOOP 400ML",
-        price:6000,
-        description:"UNA DE LAS MEJORES MARCAS EN NUESTRO TERRITORIO,MADE IN ITALY,EXPORT TO BAIRES CITY",
-        category:"AEROSOLES",
-        stock:200,
-        tipo:"Brillante/Mate",
-        img:"/loop400.JPG"
-    },
-    {
-        id :"a02",
+        
         name:"KWT 440ML",
         price:4500,
         description:"LA MARCA NUMERO 1 DE NUESTRO PAIS, MAS DE 60 COLORES A DISPOSICION",
@@ -21,7 +12,7 @@ const Products = [
         img:"/kwtpremium.JPG"
     },
     {
-        id :"a03",
+        
         name:"MTN 400ML",
         price:8000,
         description:"LA INDISCUTIBLE Y PIONERA DESDE SIEMPRE, AUNQUE NO ESTE EN EL CORAZON DE MUCHOS, SIGUE SIENDO DE LAS MEJORES. SOLO DISPONEMOS BASE BRILLANTE.",
@@ -31,7 +22,7 @@ const Products = [
         img:"/mtn400.JPG"
     },
     {
-        id :"m01",
+        
         name:"PAINT MARKERS 15MM - LOOP",
         price:3000,
         description:"MARCADOR LOOP 15MM PINTURA BASE SINTETICA, VARIOS COLORES",
@@ -41,7 +32,7 @@ const Products = [
         img:"/loopmarker.JPG"
     },
     {
-        id :"m02",
+        
         name:"MOPR 19MM - POSCA ",
         price:5000,
         description:"MARCADOR TIPO SQUEEZER MARCA POSCA PUNTA REDONDA, DISPONIBLE EN SOLO 3 COLORES, NEGRO , ROJO Y CROMO",
@@ -51,7 +42,7 @@ const Products = [
         img:"/poscamopr.JPG"
     },
     {
-        id :"m03",
+        
         name:"MARKER 4MM - UNI PAINT",
         price:2500,
         description:"MARCADOR PUNTA MEDIA PARA A LOS QUE NO LES GUSTA SER TAN AGRESIVOS,BASE DE ACEITE, RECOMENDADISIMO, TODOS LOS COLORES!",
@@ -61,7 +52,7 @@ const Products = [
         img:"/unipaintmarker.JPG"
     },
     {
-        id :"c01",
+        
         name:"SKYNNY BANANA",
         price:300,
         description:"SKYNNY BANANA UNIVERSAL LI, TRAZO FINO, TRAZO CLASICO",
@@ -71,7 +62,7 @@ const Products = [
         img:"/skynnybannana.JPG"
     },
     {
-        id :"c02",
+        
         name:"HARDCORE FAT",
         price:300,
         description:"ORANGE HARDCORE FAT, ULTRA ANCHO, ESPECIALMENTE PARA EL CROMO...",
@@ -81,7 +72,7 @@ const Products = [
         img:"/fat.JPG"
     },
     {
-        id :"c03",
+       
         name:"LEGO CAP",
         price:300,
         description:"CAP LEGO, SIN MARCA, TRAZO MEDIO Y SOLIDO, YA NO SE FABRICAN, TENEMOS PARTE DE LOS ULTIMOS!!",
