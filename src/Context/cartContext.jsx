@@ -7,6 +7,9 @@ export const CartProvider = ({children}) => {
 
 
 const addItem = (item, cantidad) =>{
+  console.log("Producto a agregar:", item);
+  console.log("Cantidad a agregar:", cantidad);
+  console.log("Carrito antes de agregar:", cart);
     if(isInCart(item.id)){
         const carritoActualizado = cart.map((prod)=>{
             if(item.id === prod.id){
@@ -25,7 +28,7 @@ const addItem = (item, cantidad) =>{
 
 
 const removeItem = (id)=>{
-    setCart(cart.filter((prod)=> prod.id !== id))
+    setCart(cart.filter((prod)=> prod.itemId !== id))
 }
 
 
@@ -35,7 +38,7 @@ const clear = () =>{
 
 
 const isInCart= (id) =>{
-    return cart.some((prod)=> prod.id === id)
+    return cart.some((prod)=> prod.itemId === id)
 }
 
 const cantidadEnCarro = () => {

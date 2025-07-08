@@ -4,11 +4,14 @@ import ItemCount from './ItemCount';
 import { CartContext } from '../Context/cartContext';
 
 
+
+
 const ItemDetail = ({detalle}) => {
 
   const { addItem } = useContext(CartContext);
 
   const onAdd = (cantidad)=>{
+    console.log(" Detalle enviado al carrito:", detalle); 
     addItem(detalle, cantidad);
     alert(`Sumaste ${cantidad} de Productos`)
   }
@@ -16,9 +19,9 @@ const ItemDetail = ({detalle}) => {
 
   return (
     <div className="d-flex justify-content-center align-items-center">
-    <Card style={{ width: '18rem',marginTop: "100px" }}>
+    <Card className='card-item'  >
       <Card.Img variant="top" src={detalle.img} />
-      <Card.Body>
+      <Card.Body >
         <Card.Title>{detalle.name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">{detalle.tipo}</Card.Subtitle>
         <Card.Text>{detalle.description}</Card.Text>

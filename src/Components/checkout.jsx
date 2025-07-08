@@ -9,7 +9,7 @@ import { database } from '../../service/firebase'
 
 function Checkout() {
     const [buyer, setBuyer] = useState ({})
-    const [validMail,setValidMail] = useState ('')
+    const [validEmail,setValidMail] = useState ('')
     const {cart,totalPagar,clear}=useContext(CartContext)
     const [orderId,setOrderId] = useState('')
 
@@ -25,7 +25,7 @@ const terminarCompra = (e) => {
     e.preventDefault()
     if(!buyer.name || !buyer.lastname || !buyer.email || !buyer.address){
         alert("HAY CAMPOS INCOMPLETOS, COMPLETAR PARA TERMINAR LA ORDEN!")
-    }else if (buyer.mail!==validMail){
+    }else if (buyer.email!==validEmail){
         alert("LOS EMAILS NO COINCIDEN")
     }else{
     
@@ -36,6 +36,7 @@ const terminarCompra = (e) => {
         fecha:serverTimestamp()
     }
     const ventas = collection(database,"ordenes")
+    console.log("Orden a enviar a Firebase:", orden) 
     addDoc(ventas,orden)
     .then((res)=>{
         setOrderId(res.id)
@@ -55,7 +56,7 @@ return (
         <h1>LISTO!! YA INGRESO TU PEDIDO, TE ESTAREMOS CONTACTANDO PARA LA ENTREGA</h1>
         <h2>TU PEDIDO ES: {orderId}</h2>
     </div>
-    : <div>
+    : <div className='form-checkout'>
         <h1>COMPLETAR FORMULARIO</h1>
         <form onSubmit={terminarCompra}>
             <input className='form-control' type='text' name='name' placeholder='INGRESA TU NOMBRE' onChange={buyerData}/>

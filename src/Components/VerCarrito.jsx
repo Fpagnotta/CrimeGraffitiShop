@@ -16,17 +16,17 @@ const VerCarrito = () => {
       <div className="carrito-lista">
         {cart.map((compra) => (
           
-            <div key={`${compra.id}-${compra.name}`}>
+            <div key={`${compra.itemId}-${compra.name}`}>
           <img src={compra.img} alt={compra.name} className="carrito-img" />
             <div className="carrito-info">
-              <span className="nombre">{compra.name}</span>
+              <span className="nombre">{compra.name}</span><br/>
               <span>${compra.price} PESOS</span><br />
               <span>Cantidad: {compra.quantity}</span><br />
               <span>Subtotal: ${compra.price * compra.quantity} PESOS</span><br />
             </div>
             <button
               className="btn btn-danger carrito-eliminar"
-              onClick={() => removeItem(compra.id)}
+              onClick={() => removeItem(compra.itemId)}
             >
               X
             </button>
@@ -39,7 +39,7 @@ const VerCarrito = () => {
       </div>
 
       <div className="carrito-botones">
-        <button className='btn btn-danger' onClick={clear}>VACIAR CARRITO</button>
+        <button className='btn btn-warning' onClick={clear}>VACIAR CARRITO</button>
         <Link className='btn btn-success' to='/checkout'>TERMINAR COMPRA</Link>
       </div>
     </div>

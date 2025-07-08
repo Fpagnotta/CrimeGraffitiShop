@@ -8,11 +8,11 @@ import { NavLink } from 'react-router-dom'
 function NavBar() {
   return (
     <Navbar bg="dark" variant="dark"  expand="lg" >
-      <Container>
-        <Navbar.Brand as={NavLink} to='/'>CR GRAFF SHOP</Navbar.Brand>
+      <Container className="d-flex justify-content-between w-100 align-items-center">
+        <Navbar.Brand as={NavLink} to='/' className="logo-brand ">CR GRAFF SHOP</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
             <Nav.Link as={NavLink} to='/' >INICIO</Nav.Link>
             <Nav.Link as={NavLink} to='/ofertas'>OFERTAS!</Nav.Link>
             <NavDropdown title="PRODUCTOS" id="basic-nav-dropdown">

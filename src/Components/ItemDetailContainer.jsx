@@ -17,7 +17,7 @@ useEffect (()=>{
     getDoc(docRef)
     .then((res)=>{
         if(res.data()){
-            setDetalle({itemId:res.itemId,...res.data()})
+            setDetalle({itemId:res.id,...res.data()})
         }else{
             setInvalid(true)
         }
